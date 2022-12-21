@@ -1,0 +1,57 @@
+.guests-selection{
+    flex-direction: column;
+    min-width: 24em;
+    position: absolute;
+    top: 10em;
+    background-color: white;
+
+    max-width: 20%;
+    left: 46%;
+    top: 10.5em;
+    column-gap: 8em;
+    padding: 16px 32px 16px 32px;
+    z-index:1000;
+
+    >.pick-guest-account{
+        // gap: 8em;
+        font-family: cereal_LT;
+        // font-size: 22px;
+        align-items: center;
+        justify-content: space-between;
+        /* align-content: space-between; */
+        min-width: 100%;
+        margin: 0;
+        border-bottom: 1px solid rgb(235, 235, 235) !important;
+    }
+    
+    >*{
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        // align-items: center;
+        // gap: 11em;
+        min-width: 1px;
+        padding: 24px 4px 24px 0;
+        
+        // >:first-child{
+            
+        // }
+        
+        >div{
+            >*{
+                margin: 0;
+                font-family:cereal_LT;
+                font-size: 14px;
+            }
+            >h3{
+                color: black;
+                // font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+            }
+            >h5{
+                color: rgb(113, 113, 113) !important;
+            }
+
+
+        }
+    }
+}

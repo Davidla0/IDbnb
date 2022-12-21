@@ -1,0 +1,39 @@
+/*!
+
+ =========================================================
+ * Light Bootstrap Dashboard React - v2.0.0
+ =========================================================
+
+ * Product Page: http://www.creative-tim.com/product/light-bootstrap-dashboard-react
+ * Copyright 2020 Creative Tim (http://www.creative-tim.com)
+ * Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard-react/blob/master/LICENSE.md)
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */
+
+@import "variables";
+@import "mixins";
+
+@import "typography";
+
+// Core CSS
+@import "misc";
+@import "buttons";
+
+@import "tables";
+
+@import "checkbox-radio-switch";
+
+// Fancy Stuff
+// @import "lbd/plugins/animate";
+@import "cards";
+@import "chartist";
+@import "bootstrap-switch";
+
+// Nucleo Icons
+@import "partial-nucleo-icons";
+
+

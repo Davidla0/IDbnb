@@ -1,0 +1,13 @@
+.app-footer{
+    background-color: $clr6;
+    color: $clr7;
+    position: sticky;
+    bottom: 0;
+    width: 100vw;
+    height: 50px;
+    
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid $clr2;
+    z-index: 4;
+}

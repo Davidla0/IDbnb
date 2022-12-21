@@ -1,0 +1,150 @@
+.header-expanded-filter {
+    background-color: #EBEBEB;
+    max-height: 70px;
+    max-width: 850px;
+    // display: flex;
+    // align-items: flex-start;
+    font-size: 12px;
+
+    &> :first-child,
+    &> :nth-child(7) {
+        padding-left: 18px;
+        align-items: flex-start;
+    }
+
+    // > * :not(span){
+    //     padding: 14px 24px;
+    // }
+
+    >*:not(:first-child, span){
+        padding: 14px 24px 14px 24px;
+    }
+
+    // >:nth-child(3)>* {
+    //     padding: 14px 24px 14px 24px;
+    // }
+
+
+    >div {
+        // margin: 10px 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-inline-start: 10px;
+        padding-inline-end: 5px;
+    }
+
+    >div>p,
+    >div>label{
+        color: #222222;
+    }
+}
+
+.expanded-filter-stay {
+    border-bottom: solid 1px #222222;
+    margin-bottom: 10px;
+    // >div{
+    width: fit-content;
+    // }
+}
+
+.expanded-search-btn {
+    border-radius: 24px;
+    background-image: radial-gradient(circle at top left, #FF385C 0%, #E61E4D 27.5%, #E31C5F 40%, #D70466 57.5%, #BD1E59 75%, #BD1E59 100%);
+    margin-right: 10px;
+    max-height: 3em;
+    max-width: 7em;
+    font-family: cereal_BD;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+    >div {
+        display: flex;
+        max-height: 48px;
+        align-items: center;
+        padding: 12px;
+        justify-content: space-between;
+        width: 85px;
+        margin-right: 10px;
+
+        >img {
+            height: 12px;
+            width: 12px;
+        }
+    }
+}
+
+.filter-input {
+    background-color: #EBEBEB;
+    border: none;
+}
+
+// ::placeholder {
+// text-align: center;
+// }
+
+/* or, for legacy browsers */
+
+//      ::-webkit-input-placeholder {
+//         text-align: center;
+//      }
+
+//      :-moz-placeholder { 
+//         text-align: center;  
+//      }
+
+//      ::-moz-placeholder { 
+//         text-align: center;  
+//      }
+
+//      :-ms-input-placeholder {  
+//         text-align: center; 
+//      }
+
+
+.header-filter-expanded {
+    top: 5em;
+    z-index: 10000000;
+}
+
+.MuiDateRangePickerInput-root.css-1cb285q-MuiDateRangePickerInput-root {
+    align-items: center;
+}
+
+.header-dates,
+.who-filter {
+    display: grid;
+    justify-items: start;
+    font-family: cereal_BK;
+    font-size: 12px;
+    >* {
+        font-family: cereal_BK;
+        font-size: 12px;
+        margin: 0px;
+    }
+
+    >:first-child {
+        color: #222222;
+    }
+}
+
+// .who-filter{
+//     display: grid;
+
+//     >*{
+//         margin: 0px;
+//     }
+
+// }
+
+
+.header-dates>.date{
+    color: #222222;
+}
+
+.header-dates{
+    // >* :not(.css-1at62qq){
+        padding: 14px 24px 14px 24px;
+    // }
+}

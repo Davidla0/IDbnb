@@ -1,0 +1,481 @@
+.reserve-section {
+    position: relative;
+    width: 33.33%;
+    margin-left: 8.33%;
+    margin-right: 0%;
+
+    .reserve-form {
+        position: sticky;
+        top: 80px;
+        margin-bottom: 50px;
+        z-index: 1;
+        width: 100%;
+        display: inline-block;
+        padding-right: 1px;
+
+        .reserve-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.6em;
+
+            .price {
+                font-family: cereal_MD;
+                font-size: 22px;
+            }
+
+            .reserve-rate {
+                display: flex;
+
+                .reserve-star {
+                    display: flex;
+                    font-family: cereal_MD;
+
+                    >.star {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    >.avg-rate {
+                        padding-left: 0.25rem;
+                    }
+                }
+
+                .reserve-reviews {
+                    margin: 0;
+                    padding: 0;
+                    background: none;
+                    text-decoration: underline;
+                    color: rgb(113, 113, 113);
+                }
+            }
+        }
+
+        .reserve {
+            padding-bottom: 3em;
+            margin-top: 3em;
+            // height: fit-content;
+            background-color: #fff;
+            border: 1px solid rgb(221, 221, 221);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
+        }
+
+        .reserve-info {
+            border: 1px solid rgb(176, 176, 176);
+            border-radius: 8px;
+            margin-bottom: 1em;
+
+            .pick-dates {
+                display: flex;
+
+                .dates-first-layer {
+                    width: 100%;
+
+                    .dates-second-layer {
+                        flex: 1 1 0%;
+                        position: relative;
+
+                        .reserve-dates {
+                            position: relative;
+                            display: flex;
+                            width: 100%;
+                            margin: 0px;
+                            border: none transparent;
+                            color: rgb(176, 176, 176);
+                            background-color: transparent;
+                            border-radius: 0px;
+                            box-shadow: none;
+                            cursor: pointer;
+                            padding: 0px;
+                            text-align: left;
+
+                            .check-out {
+                                border-left: 1px solid rgb(176, 176, 176);
+                            }
+
+                            .check-in,
+                            .check-out {
+                                position: relative;
+                                flex: 1 1 0%;
+                                padding: 0px;
+                                overflow: hidden;
+
+
+                                .txt-reserve {
+                                    position: absolute;
+                                    top: 12px;
+                                    left: 12px;
+                                    right: 12px;
+                                    margin: 0px;
+                                    padding: 0px;
+                                    pointer-events: none;
+                                    font-size: 10px;
+                                    line-height: 12px;
+                                    color: rgb(34, 34, 34);
+                                    text-transform: uppercase;
+                                    font-weight: 800;
+                                    max-width: 100%;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                }
+
+                                .date-reserve {
+                                    min-height: 56px;
+                                    width: 100%;
+                                    border: none;
+                                    outline: none;
+                                    margin: 0px;
+                                    padding: 26px 12px 10px;
+                                    background-color: transparent;
+                                    color: rgb(34, 34, 34);
+                                    font-family: inherit;
+                                    font-size: 14px;
+                                    font-weight: inherit;
+                                    line-height: 18px;
+                                    appearance: none;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                }
+
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            .guest-info {
+                display: flex;
+
+                .guest-first-layer {
+                    position: relative;
+                    width: 100%;
+
+                    .guest-details-layer {
+                        flex: 1 1 0%;
+                        position: relative;
+
+                        .guest-final-details {
+                            position: relative;
+                            display: flex;
+                            width: 100%;
+                            margin: 0px;
+                            border: none transparent;
+                            color: rgb(34, 34, 34);
+                            background-color: transparent;
+                            border-radius: 0px;
+                            box-shadow: none;
+                            font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+                            font-size: 16px;
+                            line-height: 20px;
+                            font-weight: 400;
+                            outline: 0px;
+
+                            .guests-details {
+                                position: relative;
+                                flex: 1 1 auto;
+                                padding: 0px;
+                                width: 100%;
+                                overflow: hidden;
+                                background-color: inherit;
+                                color: black;
+                                width: 100%;
+
+                                .title {
+                                    position: absolute;
+                                    top: 12px;
+                                    left: 12px;
+                                    margin: 0px;
+                                    padding: 0px;
+                                    pointer-events: none;
+                                    font-size: 10px;
+                                    line-height: 12px;
+                                    color: rgb(34, 34, 34);
+                                    text-transform: uppercase;
+                                    font-weight: 800;
+                                    max-width: 100%;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                }
+
+                                .guest-section {
+                                    min-height: 56px;
+                                    width: 100%;
+                                    border: none;
+                                    outline: none;
+                                    margin: 0px;
+                                    padding: 26px 36px 10px 12px;
+                                    background-color: transparent;
+                                    color: inherit;
+                                    font-family: inherit;
+                                    font-size: inherit;
+                                    font-weight: inherit;
+                                    line-height: inherit;
+                                    appearance: none;
+                                    cursor: pointer;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+
+                                    .guest-description {
+                                        font-size: 14px;
+                                        line-height: 18px;
+                                        position: absolute;
+                                    }
+                                }
+
+
+                            }
+                        }
+                    }
+                }
+
+                border-top: 1px solid rgb(176, 176, 176);
+
+                // .select-guests {
+                //     background: rgb(255, 255, 255);
+                //     border-radius: 4px;
+                //     box-shadow: rgb(0 0 0 / 15%) 0px 2px 6px, rgb(0 0 0 / 7%) 0px 0px 0px 1px;
+                //     margin-bottom: 16px;
+                //     min-width: 240px;
+                //     padding: 16px;
+                //     position: absolute;
+                //     text-align: left;
+                //     width: 100%;
+                //     z-index: 999;
+                //     right: 0px;
+                //     left: 0px;
+
+                //     .pick-guest-account {
+                //         margin-top: 8px;
+                //         margin-bottom: 24px;
+                //         display: flex;
+                //         justify-content: space-between;
+                //         cursor: pointer;
+
+                //         &> :first-child {
+                //             >h3 {
+                //                 font-size: 16px;
+                //                 padding-bottom: 4px;
+                //                 font-weight: 600;
+                //                 margin: 0;
+                //             }
+
+                //             >h5 {
+                //                 margin: 0;
+                //                 font-size: 14px;
+                //                 font-weight: 400;
+                //                 opacity: 0.8;
+                //             }
+                //         }
+
+                //         .choose-amount {
+                //             display: flex;
+
+                //             >div {
+                //                 display: flex;
+                //                 justify-content: space-between;
+                //                 align-items: center;
+                //                 width: 104px;
+                //                 line-height: 20px;
+                //                 height: 32px;
+
+                //                 >button {
+                //                     background: none;
+                //                     color: black;
+                //                     border-radius: 50%;
+                //                     width: 32px;
+                //                     border: 1px solid black;
+                //                     height: 32px;
+                //                     border-color: rgb(176, 176, 176);
+                //                     color: rgb(113, 113, 113);
+                //                     display: flex;
+                //                     justify-content: center;
+                //                     align-items: center;
+                //                 }
+                //             }
+
+
+                //         }
+                //     }
+
+                //     .close-btn-reserve{
+                //         width: 100%;
+                //         background: none;
+                //         color: #222;
+                //         font-weight: 600;
+                //         text-decoration: underline;
+                //         display: flex;
+                //         justify-content: flex-end;
+                //     }
+                // }
+
+
+            }
+
+        }
+
+        .reserve-btn-section {
+
+            #gradientBtn {
+                width: 100%;
+                min-height: 3.5em;
+                border-radius: 8px;
+
+                background-image: linear-gradient(to right,
+                        rgb(230, 30, 77) 0%,
+                        rgb(227, 28, 95) 50%,
+                        rgb(215, 4, 102) 100%);
+
+                .gradient {
+                    background-image: radial-gradient(circle at center center,
+                            rgb(255, 56, 92) 0%,
+                            rgb(230, 30, 77) 27.5%,
+                            rgb(227, 28, 95) 40%,
+                            rgb(215, 4, 102) 57.5%,
+                            rgb(189, 30, 89) 75%,
+                            rgb(189, 30, 89) 100%);
+                    background-position: calc((100 - var(--mouse-x, 0)) * 1%) calc((100 - var(--mouse-y, 0)) * 1%);
+                    background-size: 200% 200%;
+                    transform: scale(1);
+                }
+
+                &:hover {
+                    .gradient {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .msg-txt {
+            text-align: center;
+            margin-top: 0.5em;
+
+            &>* {
+                margin-top: 0.5em;
+                white-space: normal;
+                font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+
+        .calc-reserve {
+            margin-top: 1.6em;
+
+            .total-price-nights> :nth-child(1),
+            .cleaning-fee> :nth-child(1),
+            .service-fee> :nth-child(1) {
+                text-decoration: underline;
+            }
+
+            .cleaning-fee,
+            .service-fee {
+                padding-top: 1em;
+            }
+
+            .total {
+                .total-amount {
+                    font-size: 1em;
+                    line-height: 1.12em;
+                    color: rgb(34, 34, 34);
+                    font-family: cereal_BD;
+                    border-top: 1px solid rgb(221, 221, 221);
+                    margin-top: 24px;
+                    padding-top: 24px;
+                }
+
+
+            }
+        }
+    }
+
+
+
+
+}
+
+.select-guests {
+    background: rgb(255, 255, 255);
+    border-radius: 4px;
+    box-shadow: rgb(0 0 0 / 15%) 0px 2px 6px, rgb(0 0 0 / 7%) 0px 0px 0px 1px;
+    margin-bottom: 16px;
+    min-width: 240px;
+    padding: 16px;
+    position: absolute;
+    text-align: left;
+    width: 100%;
+    z-index: 999;
+    right: 0px;
+    left: 0px;
+
+    .pick-guest-account {
+        margin-top: 8px;
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+
+        &> :first-child {
+            >h3 {
+                font-size: 16px;
+                padding-bottom: 4px;
+                font-weight: 600;
+                margin: 0;
+            }
+
+            >h5 {
+                margin: 0;
+                font-size: 14px;
+                font-weight: 400;
+                opacity: 0.8;
+            }
+        }
+
+        .choose-amount {
+            display: flex;
+
+            >div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 104px;
+                line-height: 20px;
+                height: 32px;
+
+                >button {
+                    background: none;
+                    color: black;
+                    border-radius: 50%;
+                    width: 32px;
+                    border: 1px solid black;
+                    height: 32px;
+                    border-color: rgb(176, 176, 176);
+                    color: rgb(113, 113, 113);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+
+        }
+    }
+
+    .close-btn-reserve{
+        width: 100%;
+        background: none;
+        color: #222;
+        font-weight: 600;
+        text-decoration: underline;
+        display: flex;
+        justify-content: flex-end;
+    }
+}

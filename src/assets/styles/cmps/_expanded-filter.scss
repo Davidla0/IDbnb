@@ -1,0 +1,260 @@
+.expanded-filter {
+  z-index: 10000000;
+  height: 90%;
+  // height: 100%;
+  position: fixed;
+  border: 1px solid;
+  max-width: 780px;
+  // border-radius: 12px;
+  transform: translateY(100vh);
+  transition: .6s;
+  border-radius: 15px;
+  // max-width: 780px;
+  // width: 100%;
+  color: #484848;
+  background-color: rgb(255, 255, 255);
+  padding: 0 24px 0 24px;
+  z-index: 1000000;
+
+  top: 5%;
+  left: 30%;
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+
+  >div {
+    height: 100%;
+    margin: 40px 0 40px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+  }
+}
+
+.filter-header,
+.filter-footer {
+  height: 80px;
+  width: 100%;
+
+  padding: 16px 0;
+}
+
+.filter-header{
+  border-bottom: 1px solid rgb(235, 235, 235) !important;
+}
+
+.filter-footer{
+  border-top: 1px solid rgb(235, 235, 235) !important;
+  display: flex;
+  justify-content: end;
+
+  >button{
+    border-radius: 5px;
+      padding: 15px;
+      background-color: black;
+      color: white;
+  }
+
+}
+
+.range-slider {
+  display: grid;
+  grid-template-rows: repeat(4 1fr);
+  width: 100%;
+  position: relative;
+  margin-right: 24px;
+}
+
+.filter-container.filter-open .expanded-filter {
+  transform: translateY(0);
+}
+
+div.filter-open .main-screen {
+  display: block;
+  z-index: 10000;
+}
+div.ex-filter-open .main-screen {
+  display: block;
+  z-index:5
+}
+
+
+@mixin range-slider($width, $height, $input-top, $input-bg-color, $input-thumb-color, $float: none, $input-height: 20px, $input-border-radius: 14px) {
+  // position: relative;
+  width: $width;
+  height: $height;
+  text-align: left;
+
+  input[type="range"] {
+    pointer-events: none;
+    position: absolute;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-radius: $input-border-radius;
+    background: $input-bg-color;
+    box-shadow: inset 0 1px 0 0 darken($input-bg-color, 15%), inset 0 -1px 0 0 darken($input-bg-color, 10%);
+    -webkit-box-shadow: inset 0 1px 0 0 darken($input-bg-color, 15%), inset 0 -1px 0 0 darken($input-bg-color, 10%);
+    overflow: hidden;
+    width: $width;
+    outline: none;
+    height: $input-height;
+    padding: 0;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 1;
+    outline: 0;
+    -webkit-appearance: none;
+    width: $input-height;
+    height: $input-height;
+    border: none;
+    border-radius: $input-border-radius;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, lighten($input-thumb-color, 60%)), color-stop(100%, $input-thumb-color));
+    background-image: -webkit-linear-gradient(top, lighten($input-thumb-color, 60%) 0, $input-thumb-color 100%);
+    background-image: linear-gradient(to bottom, lighten($input-thumb-color, 60%) 0, $input-thumb-color 100%);
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 10;
+    -moz-appearance: none;
+    width: $input-height;
+    height: $input-height;
+    border: none;
+    border-radius: $input-border-radius;
+    // background-image: linear-gradient(to bottom, lighten($input-thumb-color,60%) 0, $input-thumb-color 100%); 
+  }
+
+  input[type="range"]::-ms-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 10;
+    -ms-appearance: none;
+    width: $input-height;
+    height: $input-height;
+    border-radius: $input-border-radius;
+    border: 0;
+    // background-image: linear-gradient(to bottom, lighten($input-thumb-color,60%) 0, $input-thumb-color 100%); 
+  }
+
+  input[type=range]::-moz-range-track {
+    position: relative;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 1);
+    border: 0;
+  }
+
+  input[type=range]:last-of-type::-moz-range-track {
+    -moz-appearance: none;
+    background: none transparent;
+    border: 0;
+  }
+
+  input[type=range]::-moz-focus-outer {
+    border: 0;
+  }
+}
+
+div.number-price-filter {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 1em;
+  align-self: center;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+section.range-slider {
+  @include range-slider(690px, 50px, 100px, #F1EFEF, #413F41, left);
+}
+
+.price-range {
+  display: grid;
+  justify-items: center;
+}
+
+.type-of-place {
+  // >div{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  width: 100%;
+  justify-items: baseline;
+
+  >* {
+    font-family: cereal_BD;
+    display: flex;
+    align-items: baseline;
+
+
+
+  }
+
+
+  // 
+  // }
+  // > label{
+  //   display: grid;
+  //   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  // }
+
+}
+
+.label-title {
+  display: grid;
+  // margin: 20px;
+
+  >label {
+    font-family: cereal_BD;
+
+
+  }
+
+  >span {
+    font-family: Roboto-Regular;
+    color: rgb(113, 113, 113)
+  }
+}
+
+.amenities {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  width: 100%;
+  // padding: 0 24px 0 24px;
+  justify-items: baseline;
+  text-align: left;
+
+  >* {
+    height: 3em;
+  }
+}
+
+.inputs {
+  max-height: 100%;
+  align-items: baseline;
+  text-align: left;
+  overflow-y: scroll;
+  overflow-x: clip;
+
+  >section {
+    border-bottom: 1px solid rgb(235, 235, 235) !important;
+    margin-bottom: 32px;
+  }
+
+  >h1 {
+    margin-bottom: 32px;
+  }
+}
+
+input {
+  margin: 10px;
+}

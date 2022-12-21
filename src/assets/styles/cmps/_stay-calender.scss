@@ -1,0 +1,36 @@
+
+.MuiDateRangePickerDay-rangeIntervalDayPreview,
+.css-1f2kitb-MuiDateRangePickerDay-root,
+.css-1h14vs8-MuiDateRangePickerDay-root,
+.css-1m3meum-MuiDateRangePickerDay-root,
+.css-w38svh-MuiDateRangePickerDay-root {
+    background-color: #F7F7F7 !important;
+}
+
+.css-jwafdq-MuiButtonBase-root-MuiPickersDay-root-MuiDateRangePickerDay-day.Mui-selected,
+.css-pgdzhj-MuiButtonBase-root-MuiPickersDay-root-MuiDateRangePickerDay-day.Mui-selected,
+.css-18fxmqw-MuiButtonBase-root-MuiPickersDay-root-MuiDateRangePickerDay-day.Mui-selected  {
+
+    
+    background-color: #222 !important;
+}
+
+.css-qhrdzm-MuiButtonBase-root-MuiPickersDay-root-MuiDateRangePickerDay-day,
+.css-1rhx85y-MuiButtonBase-root-MuiPickersDay-root-MuiDateRangePickerDay-day{
+    font-family: cereal_MD !important;
+    font-size: 14px !important;
+}
+
+.css-3pa7bi-MuiDateRangePickerViewDesktop-container:not(:last-of-type){
+    border-right: none !important;
+}
+
+.css-1o490ea-MuiDateRangePickerDay-rangeIntervalPreview{
+    width: 42px;
+    height: 42px;
+}
+
+.calender{
+    border-top: 1px solid #DDDDDD;
+    padding: 3rem 0;
+}

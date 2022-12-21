@@ -1,0 +1,22 @@
+button{
+    border:0;
+    background-color: $clr1;
+    color:whitesmoke;
+    cursor: pointer;
+}
+
+form > * {
+    display: block;
+    width: 200px;
+}
+
+.btn-link {
+    border:0;
+    background-color: transparent;
+    text-decoration: underline;
+    transition: .5s;
+}
+.btn-link:hover {
+    background-color: $clr1;
+    transform: scale(1.1);
+}

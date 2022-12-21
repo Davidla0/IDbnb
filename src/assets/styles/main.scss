@@ -1,0 +1,85 @@
+// Setup
+@import "setup/variables";
+@import "setup/functions";
+@import "setup/typography";
+@import "setup/mixins";
+
+
+
+// Basics
+@import "basics/helpers";
+@import "basics/layout";
+@import "basics/base";
+@import "basics/links";
+@import "basics/forms";
+
+// Views
+@import "pages/about-us";
+@import "pages/home-page";
+@import "pages/bnb-app";
+@import "pages/review-app";
+@import "pages/stay-details";
+@import "pages/dashboard";
+
+// Components
+@import "cmps/app-header";
+@import "cmps/header-filter";
+@import "cmps/header-profile";
+@import "cmps/app-footer";
+@import "cmps/user-msg";
+@import "cmps/stay-list";
+@import "cmps/stay-preview";
+@import "cmps/stay-filter";
+@import "cmps/expanded-filter";
+@import "cmps/reserve";
+@import "cmps/stay-review";
+@import "cmps/header-expanded-filter";
+@import "cmps/summary";
+@import "cmps/details-header";
+@import "cmps/guests-selection";
+@import "cmps/filter-by-labels";
+
+@import "cmps/stay-calender";
+@import "cmps/login-signup";
+@import "cmps/calender-date-picker";
+@import "cmps/my-orders";
+@import "cmps/user-msg";
+
+
+// @import "pages/cards";
+
+
+/////////
+/// 
+/// 
+@import "lbd/light-bootstrap-dashboard-react.scss"
+// @import "~bootstrap/scss/bootstrap";
+
+
+// @import "lbd/variables";
+// @import "lbd/mixins";
+
+// @import "lbd/typography";
+
+// // Core CSS
+// @import "lbd/misc";
+// @import "lbd/buttons";
+
+// @import "lbd/tables";
+
+// @import "lbd/checkbox-radio-switch";
+
+// // Fancy Stuff
+// // @import "lbd/plugins/animate";
+// @import "lbd/cards";
+// @import "lbd/chartist";
+// @import "lbd/bootstrap-switch";
+
+// // Nucleo Icons
+// @import "lbd/partial-nucleo-icons";
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+// Colors
+$clr1: #FF5A5F;
+$clr2: #767676;
+$clr3: #574f7d;
+$clr4: #95adbe;
+$clr5: #dff0ea;
+$clr6: #fff;
+$clr7: #222;
+$clr8: #484848;
+
+// LAYOUT
+$layoutPadding: 80px;
+
+// Breakpoints
+$mobile-breakpoint: 470px;
+$narrow-breakpoint: 870px;
+$normal-breakpoint: 1048px;
+$wide-breakpoint: 1400px;
+
+$padded-break-mobile: $mobile-breakpoint+ $layoutPadding * 2;
+$padded-break-narrow: $narrow-breakpoint+ $layoutPadding * 2;
+$padded-break-normal: $normal-breakpoint + $layoutPadding * 2;
+$padded-break-wide: $wide-breakpoint + $layoutPadding * 2;
+
+
+

@@ -1,0 +1,95 @@
+.reviews {
+    border-top: 1px solid #DDDDDD;
+    padding: 3em 0;
+
+    .review-header {
+        display: flex;
+        margin-bottom: 2rem;
+        font-size: 1.375em;
+        font-family: cereal_MD;
+        letter-spacing: 0.03em;
+        align-items: center;
+
+        .reviews-rate {
+            display: flex;
+        }
+    }
+
+    .reviews-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .review {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-right: 95px;
+            margin-bottom: 40px;
+            padding: 5px;
+
+            .reviewer-header-details {
+                height: 40px;
+                display: flex;
+                justify-content: left;
+                margin-bottom: 1rem;
+
+                .reviewer-img>img {
+                    border-radius: 50%;
+                }
+
+                .review-date{
+                    color: #717171;
+                }
+
+
+                .reviewer-details {
+                    margin-left: 12px;
+                    font-size: 1em;
+                    line-height: 20px;
+                    font-family: Circular, -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+                    display: flex;
+                    flex-direction: column;
+
+                    .reviewer-name {
+                        font-family: 'Circular',-apple-system,'BlinkMacSystemFont','Roboto','Helvetica Neue',sans-serif;;
+                        font-size: 1rem;
+                        color: #222 ;
+                        font-weight: 600 ;
+                        line-height: inherit ;
+                        margin: 0px ;
+                        padding: 0px;
+                    }
+
+                    &> :nth-child(2) {
+                        font-size: 0.87rem;
+                    }
+                }
+            }
+
+            .review-body {
+                line-height: 24px;
+                font-size: 1rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
+
+    .show-all-btn {
+
+        & div {
+            cursor: pointer;
+            width: fit-content;
+            padding: 10px;
+            border: 1px solid #222;
+            border-radius: 10px;
+        }
+
+        & div:hover {
+            background-color: #F7F7F7;
+        }
+    }
+}

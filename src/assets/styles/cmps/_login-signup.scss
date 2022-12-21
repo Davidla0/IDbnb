@@ -1,0 +1,105 @@
+// .login-section{
+//     position: relative;
+//     left: -50%;
+//     top: 6rem;
+//     width: 100%;
+//     background-color: #fff;
+//     border-radius: 12px;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+.login-true {
+    position: absolute;
+    left: 50%;
+    display: block;
+    z-index: 999;
+    width: 30%;
+}
+
+.login-false {
+    display: none;
+}
+
+.css-nzinn5-MuiContainer-root {
+    width: 100%;
+    margin-left: auto;
+    box-sizing: border-box;
+    margin-right: auto;
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+
+    .css-ag7rrr-MuiTypography-root {
+        position: relative;
+        right: 26%;
+        font-family: cereal_MD;
+    }
+
+    .css-binzgt {
+        min-height: 50vh;
+        border-radius: 10px;
+        background-color: #fff;
+        border: 1px solid rgb(221, 221, 221);
+        border-radius: 12px;
+        padding: 24px;
+        box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
+    }
+
+    .css-1999axt-MuiAvatar-root {
+        display: none;
+    }
+
+    .css-1vhaqj4-MuiButtonBase-root-MuiButton-root {
+
+        width: 100%;
+        min-height: 3.5em;
+        border-radius: 8px;
+
+        // background-image: linear-gradient(to right,
+        //         rgb(230, 30, 77) 0%,
+        //         rgb(227, 28, 95) 50%,
+        //         rgb(215, 4, 102) 100%);
+
+
+        background-image: radial-gradient(circle at center center,
+                rgb(255, 56, 92) 0%,
+                rgb(230, 30, 77) 27.5%,
+                rgb(227, 28, 95) 40%,
+                rgb(215, 4, 102) 57.5%,
+                rgb(189, 30, 89) 75%,
+                rgb(189, 30, 89) 100%);
+        background-position: calc((100 - var(--mouse-x, 0)) * 1%) calc((100 - var(--mouse-y, 0)) * 1%);
+        background-size: 200% 200%;
+        transform: scale(1);
+    }
+
+    &:hover {
+        .gradient {
+            opacity: 1;
+        }
+    }
+
+    .css-101ca9i-MuiTypography-root-MuiLink-root {
+        color: #222;
+        font-family: cereal_MD;
+    }
+
+    .css-11lq3yg-MuiGrid-root {
+        position: absolute;
+        bottom: 5%;
+    }
+}
+
+
+@media (min-width: 744px) {
+    .css-nzinn5-MuiContainer-root {
+        /* max-width: 444px; */
+        width: 100% !important;
+        max-width: 568px !important;
+        border-radius: 12px !important;
+    }
+}

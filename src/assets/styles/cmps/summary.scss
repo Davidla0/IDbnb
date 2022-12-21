@@ -1,0 +1,51 @@
+.summary-section {
+    width: 50%;
+    background-color: #fff;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
+    margin: 10% auto 13% auto;
+
+
+    .stay-details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #DDDDDD;
+        font-family: cereal_BD;
+        padding-top: 2em;
+
+        > :nth-child(2) {
+            width: 50%;
+        }
+    }
+
+    .guests-details,
+    .stay-dates,
+    .order-total-price {
+        padding-top: 2em;
+        border-top: 1px solid #DDDDDD;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid #DDDDDD;
+    }
+
+    .btns-summary{
+        border-top: 1px solid #DDDDDD;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+        .back-home-btn,
+        .your-orders-btn{
+           
+            background: none;
+            color: #222;
+            font-weight: 600;
+            text-decoration: underline;
+            // display: flex;
+            // justify-content: space-between;
+        }
+    }
+
+}

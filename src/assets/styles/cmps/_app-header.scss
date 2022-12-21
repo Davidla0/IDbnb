@@ -1,0 +1,53 @@
+
+
+.app-header,
+.details-header {
+    padding: 0px;
+    padding: 20px 20px;
+    // position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 0.1px solid #EBEBEB;
+    font-family: cereal_BD;
+    font-size: 22px;
+    letter-spacing: -1px;
+    color: $clr1;
+    background-color: $clr6;
+    padding-right: 20px;
+    color: $clr8;
+    font-family: cereal_BK;
+    font-size: 15px;
+    text-shadow: 0.1px 0.1px $clr2;
+    letter-spacing: -0.2px;
+    align-items: baseline;
+
+    >section {
+        align-items: baseline;
+    }
+
+    .become-host-link {
+        padding-right: 20px;
+    }
+
+    .logo-container {
+        border-bottom: 0.1px solid transparent;
+        font-family: cereal_BD;
+        font-size: 22px;
+        letter-spacing: -1px;
+        color: $clr1;
+        background-color: $clr6;
+
+    }
+
+}
+
+
+.details-header {
+    position: static;
+}
+
+.filters-container {
+    display: grid;
+    justify-items: center;
+}
