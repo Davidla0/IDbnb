@@ -52,7 +52,6 @@ export function saveOrder(order) {
                 order = await orderService.save(order)
             }
             dispatch(getActionSaveOrder(order))
-            // console.log('order:', order)
         } catch (err) {
             console.log('UserActions: err in load order', err)
         }

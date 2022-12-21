@@ -11,7 +11,7 @@ import { useState } from "react"
 import { useEffect } from "react"
 import { orderService } from "../services/order.service"
 import { userService } from "../services/user.service"
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { getOrders, saveOrder } from '../store/order.actions';
 
 
@@ -45,20 +45,28 @@ function createData(stayName, startDate, endDate, total, status, id) {
 export function TableOrders() {
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(10);
-    const [orders, setOrders] = useState([])
+    // const [orders, setOrders] = useState([])
     const [rows, setRows] = useState([])
+
+    const { orders } = useSelector(state => state.orderModule)
 
     const dispatch = useDispatch()
 
     useEffect(() => {
-        loadOrders()
+        if (!orders) { loadOrders() }
+        else {
+            setRows(orders.map(order => createData(order.stay.name, order.startDate, order.endDate, order.total, order.status, order._id)))
+        }
     }, [orders])
 
-    const loadOrders = async () => {
-        const orders = await orderService.query()
-        setOrders(orders)
-        setRows(orders.map(order => createData(order.stay.name, order.startDate, order.endDate, order.total, order.status, order._id)))
+    function loadOrders() {
+        // const orders = await orderService.query()
         dispatch(getOrders())
+
+        // console.log(orders)
+        // setOrders(orders)
+        // setRows(orders.map(order => createData(order.stay.name, order.startDate, order.endDate, order.total, order.status, order._id)))
+
     }
 
 
@@ -94,16 +102,18 @@ export function TableOrders() {
         const value = ev.target.value
         let order = await orderService.getById(id)
         order.status = value
-        order = await orderService.save(order)
+        // order = await orderService.save(order)
+        // const newOrders = orders.filter(ord => ord._id !== order._id)
+        // setOrders([...newOrders, order])
 
-        const newOrders = orders.filter(ord => ord._id !== order._id)
-        setOrders([newOrders, order])
-      
+        dispatch(saveOrder(order))
+
+
     }
 
     if (!rows) return <h1>Loading ..</h1>
     return (
-        <Paper sx={{ width: '100%', overflow: 'hidden', margin: 0}}>
+        <Paper sx={{ width: '100%', overflow: 'hidden', margin: 0 }}>
             <TableContainer sx={{ maxHeight: 440 }}>
                 <Table stickyHeader aria-label="sticky table">
                     <TableHead>
@@ -130,13 +140,17 @@ export function TableOrders() {
                                             return <React.Fragment>
                                                 {column.id === 'status' ?
                                                     <TableCell key={column.id} align={column.align} style={{ color: checkStatus(value) }}>
-                                                       
-                                                        <select name="status" id="status" value={row.status} onChange={(event) => handleChange(event, row.id)}>
-                                                            <option value="pending">pending</option>
-                                                            <option value="confirmed">confirmed</option>
-                                                            <option value="rejected">rejected</option>
-                                                            
-                                                        </select>
+                                                        {window.location.href.includes('my-orders') ?
+                                                            <p>{row.status}</p>
+                                                            :
+
+                                                            <select name="status" id="status" value={row.status} onChange={(event) => handleChange(event, row.id)}>
+                                                                <option value="pending">pending</option>
+                                                                <option value="confirmed">confirmed</option>
+                                                                <option value="rejected">rejected</option>
+
+                                                            </select>
+                                                        }
 
                                                     </TableCell>
                                                     :
